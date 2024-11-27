@@ -1,0 +1,80 @@
+{
+  "name": "manim-runner",
+  "displayName": "manim-runner",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:manimRunner.runManimScene"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "manimRunner.runManimScene",
+        "title": "Run Manim Scene"
+      },
+      {
+        "command": "manimRunner.checkpointPaste",
+        "title": "Manim: Checkpoint Paste"
+      },
+      {
+        "command": "manimRunner.recordedCheckpointPaste",
+        "title": "Manim: Recorded Checkpoint Paste"
+      },
+      {
+        "command": "manimRunner.skippedCheckpointPaste",
+        "title": "Manim: Skip Checkpoint Paste"
+      },
+      {
+        "command": "manimRunner.exit",
+        "title": "Manim: Exit Environment"
+      }
+    ],
+    "keybindings": [
+      {
+          "command": "manimRunner.runManimScene",
+          "key": "ctrl+shift+r",
+          "when": "editorTextFocus"
+      },
+      {
+          "command": "manimRunner.checkpointPaste",
+          "key": "ctrl+shift+p",
+          "when": "editorTextFocus"
+      },
+      {
+        "command": "manimRunner.recordedCheckpointPaste",
+        "key": "ctrl+shift+[",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "manimRunner.skippedCheckpointPaste",
+        "key": "ctrl+shift+]",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "manimRunner.exit",
+        "key": "ctrl+shift+l",
+        "when": "editorFocus"
+      }
+  ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.95.0",
+    "@types/mocha": "^10.0.9",
+    "@types/node": "20.x",
+    "eslint": "^9.13.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
