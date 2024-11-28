@@ -1,0 +1,1 @@
+# manimgl_vscode_extensions
