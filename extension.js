@@ -51,7 +51,7 @@ function runManimScene() {
     terminal.sendText(command);
 }
 
-function checkpointPaste(argStr = '') {
+async function checkpointPaste(argStr = '') {
     const editor = vscode.window.activeTextEditor;
     if (!editor) {
         vscode.window.showErrorMessage('No active editor found.');
@@ -66,6 +66,10 @@ function checkpointPaste(argStr = '') {
     const selectedText = selection.isEmpty
         ? document.lineAt(selection.active.line).text
         : document.getText(selection);
+
+    // 将选中的内容复制到剪贴板
+    await vscode.env.clipboard.writeText(selectedText);
+    vscode.window.showInformationMessage('Selected text copied to clipboard.');
 
     // 处理选中的文本
     const lines = selectedText.split('\n');

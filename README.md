@@ -1,14 +1,13 @@
-# manim-runner README
+# Manim Runner Extension
 
-This is the README for your extension "manim-runner". After writing up a brief description, we recommend including the following sections.
+This extension provides quick access to Manim commands directly from VS Code. Users can run scenes, check outputs, and manage checkpoints with ease.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- Run Manim scenes.
+- Copy and paste checkpoints.
+- Exit commands directly from the terminal.
 
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
 
 > Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
 
